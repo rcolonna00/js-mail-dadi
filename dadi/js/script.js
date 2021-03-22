@@ -1,6 +1,3 @@
-//chiedo se vuole giocare 
-prompt
-
 // numero casuale computer da 1 a 6
 var numeroCasualePc = Math.floor(Math.random() * 6) + 1;
 console.log(numeroCasualePc)
