@@ -1,23 +1,37 @@
 //email inserita dall'utente
-var emailUtente = prompt('inserisci la tu e-mail')
+var utenteEmail = prompt( 'dimmi la tua email' );
 
-//array di email
-var arrayEmail = ['vito@gmail.com', 'giuseppe@gmail.com', 'francesco@gmail.com', 'riccardo@gmail.com', 'donato@gmail.com', 'riccardo@gmail.com'];
-var emailTrovata = false;
+//lista mail
+var arrayEmail = [
+    'vito@gmail.com', 
+    'giuseppe@gmail.com', 
+    'francesco@gmail.com', 
+    'riccardo@gmail.com', 
+    'donato@gmail.com', 
+    'riccardo@gmail.com'
+];
+
+console.log(utenteEmail);
+console.log(arrayEmail);
+
+var loginEmail = false;
+console.log(loginEmail);
 
 //controllo dei dati dell'utente
-for (var i = 0; i < arrayEmail.length; i++){
-    var thisEmail = arrayEmail[i];
+for ( var i = 0; i < arrayEmail.length; i++ ){
+    archivioEmail = arrayEmail[i];
 
-    if( thisEmail == emailUtente ) {
-        emailTrovata = true;
-        alert('email corretta');
-    } else{
-        emailTrovata = false;
+    if( utenteEmail === archivioEmail ){
+        loginEmail = true;
     }
 
-    console.log(thisEmail);
-    console.log(emailTrovata);
+    console.log( archivioEmail + ' - ' + utenteEmail );
+    console.log( loginEmail );
 }
 
 //stampare messaggio finale
+if( loginEmail === true ) {
+    alert("Puoi entrare");
+} else {
+    alert("Non puoi entrare");
+}
